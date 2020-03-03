@@ -1,4 +1,4 @@
-package com.rsoudani.tutorials.kafka.tutorial1;
+package kafka.tutorial1;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.Consumer;
