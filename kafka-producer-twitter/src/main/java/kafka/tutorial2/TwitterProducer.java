@@ -31,7 +31,7 @@ public class TwitterProducer {
     private String consumerSecret = "7wWaeiKYBMo7sNu11jxfaj29rOiKmnaXsPGQsmeTNaetEoWeaA";
     private String token = "2892130444-lsUmyEF2iENV9lmPJFFiVKfmCmLullg076UMgOJ";
     private String tokenSecret = "5COcO3i63oj2yxHlsnjXshS6dehoCIE84DsZdWMEax3fu";
-    List<String> terms = Lists.newArrayList("kafka", "java", "bitcoin", "sport");
+    List<String> terms = Lists.newArrayList("corona");
 
     public TwitterProducer() {
     }
@@ -68,7 +68,7 @@ public class TwitterProducer {
             if (msg != null) {
                 log.info("message: " + msg);
                 //create producer record
-                kafkaProducer.send(new ProducerRecord<>("tweeter_tweets", null, msg), new Callback() {
+                kafkaProducer.send(new ProducerRecord<>("twitter_tweets", null, msg), new Callback() {
                     @Override
                     public void onCompletion(final RecordMetadata recordMetadata, final Exception e) {
                         //execute every time on success or error
@@ -132,6 +132,5 @@ public class TwitterProducer {
 
         return hosebirdClient;
     }
-
 
 }

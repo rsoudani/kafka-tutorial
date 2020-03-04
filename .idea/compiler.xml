@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="kafka-producer-twitter" />
+        <module name="kafka-streams-filter-tweets" />
         <module name="kafka-basics" />
         <module name="kafka-consumer-elasticsearch" />
       </profile>
